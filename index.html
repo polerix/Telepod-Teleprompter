@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teleprompter</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #0000FF; /* Full Screen Blue Background */
+    }
+
+    #toolbar {
+      position: fixed;
+      top: 100px;
+      width: 100%;
+      height: 100px;
+      background-color: #FF0000; /* Teleprompter Function Toolbar */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .button {
+      width: 90px;
+      height: 90px;
+      background-color: #000;
+      margin: 0 20px;
+      cursor: pointer;
+    }
+
+    #urlButton {
+      background-image: url('./web-link.svg');
+      background-size: cover;
+    }
+
+    #webcamButton {
+      background-image: url('./webcam-icon.svg');
+      background-size: cover;
+    }
+
+    #colorButton {
+      background-color: #FFFFFF;
+    }
+
+    #githubButton {
+      background-color: #000000;
+    }
+
+    #colorPicker {
+      display: none;
+      position: fixed;
+      top: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div id="toolbar">
+    <div class="button" id="urlButton"></div>
+    <div class="button" id="webcamButton"></div>
+    <div class="button" id="colorButton"></div>
+    <div class="button" id="githubButton"></div>
+  </div>
+
+  <div id="colorPicker">
+    <input type="color" id="colorInput">
+  </div>
+
+  <script>
+    document.getElementById('urlButton').addEventListener('click', function() {
+      // Logic for URL Background
+      // Implement URL input and validation here
+      // If URL is accessible, set the background to green, else set it to red
+    });
+
+    document.getElementById('webcamButton').addEventListener('click', function() {
+      // Logic for Webcam Background
+      // Implement Webcam functionality here
+      // If Webcam is active, set the background accordingly
+    });
+
+    document.getElementById('colorButton').addEventListener('click', function() {
+      // Logic for Solid Color Background
+      document.getElementById('colorPicker').style.display = 'block';
+      document.getElementById('colorInput').addEventListener('input', function() {
+        document.body.style.backgroundColor = this.value;
+      });
+    });
+
+    document.getElementById('githubButton').addEventListener('click', function() {
+      // Logic for displaying GitHub link as a layer with opacity
+      // Add a layer with the GitHub link and set opacity to 50%
+    });
+  </script>
+</body>
+</html>
