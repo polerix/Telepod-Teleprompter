@@ -69,3 +69,6 @@ then display Full Screen Blue Background.
 Teleprompter Toolbar Rectangle Button 4) 
 
 display https://github.com/manifestinteractive/teleprompter#project-support over the background chosen above as a layer, opacity 50%
+
+
+- shout out to https://github.com/manifestinteractive/teleprompter who have built one of the neatest teleprompters out there - help them out if you can!
